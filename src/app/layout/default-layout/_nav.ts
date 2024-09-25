@@ -106,7 +106,7 @@ export const navItems: INavData[] = [
   {
     name: 'Meal Categories',
     url: '/meal-categories',
-    icon: 'nav-icon-dinner',
+    icon: 'cil-clear-all',
     /*children: [
       {
         name: '',
@@ -175,7 +175,7 @@ export const navItems: INavData[] = [
   {
     name: 'Sea Meals',
     url: '/sea-meals',
-    iconComponent: { name: 'cil-fish' },
+    iconComponent: { name: 'cil-clear-all' },
     children: [
       {
         name: 'Meals',
@@ -204,7 +204,7 @@ export const navItems: INavData[] = [
   {
     name: 'Chicken Meals',
     url: '/chicken-meals',
-    iconComponent: { name: 'cil-drumstick' },
+    iconComponent: { name: 'cil-clear-all' },
     children: [
       {
         name: 'Meals',
@@ -233,7 +233,7 @@ export const navItems: INavData[] = [
   {
     name: 'Beef Meals',
     url: '/beef-meals',
-    iconComponent: { name: 'cil-steak' },
+    iconComponent: { name: 'cil-clear-all' },
     children: [
       {
         name: 'Meals',
@@ -262,7 +262,7 @@ export const navItems: INavData[] = [
   {
     name: 'Soups',
     url: '/soups',
-    iconComponent: { name: 'cil-bowl' },
+    iconComponent: { name: 'cil-clear-all' },
     children: [
       {
         name: 'Meals',
@@ -291,7 +291,7 @@ export const navItems: INavData[] = [
   {
     name: 'Salads',
     url: '/salads',
-    iconComponent: { name: 'cil-leaf' },
+    iconComponent: { name: 'cil-clear-all' },
     children: [
       {
         name: 'Meals',
@@ -320,7 +320,7 @@ export const navItems: INavData[] = [
   {
     name: 'Legumes',
     url: '/legume',
-    iconComponent: { name: 'cil-apple' },
+    iconComponent: { name: 'cil-clear-all' },
     children: [
       {
         name: 'Meals',
@@ -349,7 +349,7 @@ export const navItems: INavData[] = [
   {
     name: 'Cereal Meals',
     url: '/cereal-meals',
-    iconComponent: { name: 'cil-grain' },
+    iconComponent: { name: 'cil-clear-all' },
     children: [
       {
         name: 'Meals',

@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+
+// If you want to override variables do it here
+@import "variables";
+
+// Import styles with default layout.
+@import "@coreui/coreui/scss/coreui";
+
+// Import Chart.js custom tooltips styles
+@import "@coreui/chartjs/scss/coreui-chartjs";
+
+// Custom styles for this theme
+@import "theme";
+
+// Some temp fixes
+//@import "fixes";
+
+// If you want to add custom CSS you can put it here.
+@import "custom";
+
+// Examples
+// We use those styles to show code examples, you should remove them in your application.
+@import "examples";
+
+.sidebar-header-custom {
+  background: linear-gradient(45deg, #00c6ff, #0072ff); /* Gradyan arka plan */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+
+  p {
+    font-size: 12px;
+    font-weight: bold;
+    color: white; /* Beyaz yazı rengi */
+    font-family: 'Poppins', sans-serif; /* Modern bir yazı tipi */
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Harfler arası genişlik */
+    background: linear-gradient(45deg, #ff6b6b, #f06595);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; /* Yazı içinde gradyan */
+    position: relative;
+    display: inline-block;
+
+    /* 3D efekti */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2),
+                 2px 2px 10px rgba(0, 0, 0, 0.2);
+
+    /* Hareketli kenarlık */
+    &::before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      background: linear-gradient(45deg, #d7a0a2, #fad0c4, #fbc2eb);
+      border-radius: 12px;
+      z-index: -1;
+      animation: border-anim 5s infinite linear;
+    }
+
+    /* Hover efekti */
+    &:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+}
+
+@keyframes border-anim {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+

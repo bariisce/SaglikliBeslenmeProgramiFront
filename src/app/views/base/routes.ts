@@ -4,7 +4,7 @@ export const routes: Routes = [
   {
     path: '',
     data: {
-      title: 'Base'
+      title: 'Admin'
     },
     children: [
       {
@@ -12,18 +12,18 @@ export const routes: Routes = [
         redirectTo: 'cards',
         pathMatch: 'full'
       },
-      {
-        path: 'accordion',
-        loadComponent: () => import('./accordion/accordions.component').then(m => m.AccordionsComponent),
+      { //import('./allergy/allergies.component.html').then(m => m.AllergiesComponent),
+        path: 'allergies',
+        loadComponent: () => import('./allergy/allergies.component.html').then(m => m.AllergiesComponent),
         data: {
-          title: 'Accordion'
+          title: 'Allergy'
         }
       },
       {
-        path: 'breadcrumbs',
+        path: 'Admin',
         loadComponent: () => import('./breadcrumbs/breadcrumbs.component').then(m => m.BreadcrumbsComponent),
         data: {
-          title: 'Breadcrumbs'
+          title: 'Admin'
         }
       },
       {

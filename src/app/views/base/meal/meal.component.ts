@@ -34,7 +34,7 @@ type CardColor = {
 }
 
 @Component({
-  selector: 'app-admin',
+  selector: 'app-meal',
   templateUrl: './meal.component.html',
   styleUrls: ['./meal.component.scss'],
   standalone: true,

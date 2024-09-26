@@ -5,16 +5,16 @@ import { provideRouter } from '@angular/router';
 import { ButtonModule, CardModule, GridModule, ListGroupModule, NavModule, UtilitiesModule } from '@coreui/angular';
 import { IconSetService } from '@coreui/icons-angular';
 import { iconSubset } from '../../../icons/icon-subset';
-import { AdminComponent } from './admin.component';
+import { PatientComponent } from './patient.component';
 
-describe('AdminComponent', () => {
-  let component: AdminComponent;
-  let fixture: ComponentFixture<AdminComponent>;
+describe('PatientComponent', () => {
+  let component: PatientComponent;
+  let fixture: ComponentFixture<PatientComponent>;
   let iconSetService: IconSetService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CardModule, NavModule, GridModule, ListGroupModule, UtilitiesModule, ButtonModule, AdminComponent, NoopAnimationsModule, ],
+      imports: [CardModule, NavModule, GridModule, ListGroupModule, UtilitiesModule, ButtonModule, PatientComponent, NoopAnimationsModule, ],
       providers: [IconSetService, provideRouter([])],
       teardown: { destroyAfterEach: false }   // <- add this line for Error: NG0205: Injector has already been destroyed.
     })
@@ -25,7 +25,7 @@ describe('AdminComponent', () => {
     iconSetService = TestBed.inject(IconSetService);
     iconSetService.icons = { ...iconSubset };
 
-    fixture = TestBed.createComponent(AdminComponent);
+    fixture = TestBed.createComponent(PatientComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

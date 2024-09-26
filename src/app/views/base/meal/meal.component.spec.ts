@@ -6,7 +6,6 @@ import { ButtonModule, CardModule, GridModule, ListGroupModule, NavModule, Utili
 import { IconSetService } from '@coreui/icons-angular';
 import { iconSubset } from '../../../icons/icon-subset';
 import { MealComponent } from './meal.component';
-import { Meal } from 'src/core/models/Meal';
 
 describe('MealComponent', () => {
   let component: MealComponent;

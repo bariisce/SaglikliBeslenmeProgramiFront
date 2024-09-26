@@ -12,111 +12,62 @@ export const routes: Routes = [
         redirectTo: 'cards',
         pathMatch: 'full'
       },
-      { //import('./allergy/allergies.component.html').then(m => m.AllergiesComponent),
+      {
         path: 'allergies',
-        loadComponent: () => import('./allergy/allergies.component.html').then(m => m.AllergiesComponent),
+        loadComponent: () => import('./allergy/allergies.component').then(m => m.AllergiesComponent),
         data: {
           title: 'Allergy'
         }
       },
       {
-        path: 'Admin',
-        loadComponent: () => import('./breadcrumbs/breadcrumbs.component').then(m => m.BreadcrumbsComponent),
+        path: 'admin',
+        loadComponent: () => import('./admin/admin.component').then(m => m.AdminComponent),
         data: {
           title: 'Admin'
         }
       },
       {
-        path: 'cards',
-        loadComponent: () => import('./cards/cards.component').then(m => m.CardsComponent),
+        path: 'patient',
+        loadComponent: () => import('./patient/patient.component').then(m => m.PatientComponent),
         data: {
-          title: 'Cards'
+          title: 'Patients'
         }
       },
       {
-        path: 'carousel',
-        loadComponent: () => import('./carousels/carousels.component').then(m => m.CarouselsComponent),
+        path: 'dietitian',
+        loadComponent: () => import('./dietitian/dietitian.component').then(m => m.DietitianComponent),
         data: {
-          title: 'Carousel'
+          title: 'Dietitian'
         }
       },
       {
-        path: 'collapse',
-        loadComponent: () => import('./collapses/collapses.component').then(m => m.CollapsesComponent),
+        path: 'dietitianpatient',
+        loadComponent: () => import('./dietitianpatient/dietitianpatient.component').then(m => m.DietitianPatientComponent),
         data: {
-          title: 'Collapse'
+          title: 'Dietitian Patient'
         }
       },
       {
-        path: 'list-group',
-        loadComponent: () => import('./list-groups/list-groups.component').then(m => m.ListGroupsComponent),
+        path: 'dietplan',
+        loadComponent: () => import('./dietplan/dietplan.component').then(m => m.DietPlanComponent),
         data: {
-          title: 'List Group'
+          title: 'Diet Plan'
         }
       },
       {
-        path: 'navs',
-        loadComponent: () => import('./navs/navs.component').then(m => m.NavsComponent),
+        path: 'dietplanmeal',
+        loadComponent: () => import('./dietplanmeal/dietplanmeal.component').then(m => m.DietPlanMealComponent),
         data: {
           title: 'Navs & Tabs'
         }
       },
       {
-        path: 'pagination',
-        loadComponent: () => import('./paginations/paginations.component').then(m => m.PaginationsComponent),
+        path: 'meal',
+        loadComponent: () => import('./meal/meal.component').then(m => m.MealComponent),
         data: {
-          title: 'Pagination'
+          title: 'Meal'
         }
       },
-      {
-        path: 'placeholder',
-        loadComponent: () => import('./placeholders/placeholders.component').then(m => m.PlaceholdersComponent),
-        data: {
-          title: 'Placeholder'
-        }
-      },
-      {
-        path: 'popovers',
-        loadComponent: () => import('./popovers/popovers.component').then(m => m.PopoversComponent),
-        data: {
-          title: 'Popovers'
-        }
-      },
-      {
-        path: 'progress',
-        loadComponent: () => import('./progress/progress.component').then(m => m.ProgressComponent),
-        data: {
-          title: 'Progress'
-        }
-      },
-      {
-        path: 'spinners',
-        loadComponent: () => import('./spinners/spinners.component').then(m => m.SpinnersComponent),
-        data: {
-          title: 'Spinners'
-        }
-      },
-      {
-        path: 'tables',
-        loadComponent: () => import('./tables/tables.component').then(m => m.TablesComponent),
-        data: {
-          title: 'Tables'
-        }
-      },
-      {
-        path: 'tabs',
-        loadComponent: () => import('./tabs/tabs.component').then(m => m.AppTabsComponent),
-        data: {
-          title: 'Tabs'
-        }
-      },
-      {
-        path: 'tooltips',
-        loadComponent: () => import('./tooltips/tooltips.component').then(m => m.TooltipsComponent),
-        data: {
-          title: 'Tooltips'
-        }
-      }
     ]
   }
 ];

@@ -67,7 +67,7 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Diet Plan',
-    url: '/dietplan',
+    url: '/dietitiann/dietplan',
     iconComponent: { name: 'cil-notes' },
     children: [
       {
@@ -82,7 +82,7 @@ export const navItems: INavData[] = [
       },
       {
         name: 'Diet Plans List',
-        url: '/base/cards',
+        url: '/dietetian/dietplan',
         icon: 'nav-icon-bullet'
       },
 
@@ -90,7 +90,7 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Patient',
-    url: '/dietitianpatient',
+    url: '/dietitian/dietitianpatient',
     iconComponent: { name: 'cil-user' }
   },
 
@@ -100,7 +100,7 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Diet Plan',
-    url: '/dietplan',
+    url: '/patient/dietplan',
     iconComponent: { name: 'cil-star' },
   },
   {

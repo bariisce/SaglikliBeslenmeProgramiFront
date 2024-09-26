@@ -33,6 +33,27 @@ export const routes: Routes = [
           title: 'Update Dietitian'
         }
       },
+      {
+        path: 'allergies',
+        loadComponent: () => import('./allergies/allergies.component').then(m => m.AllergiesComponent),
+        data: {
+          title: 'Patient Allergies'
+        }
+      },
+      {
+        path: 'healthrecords',
+        loadComponent: () => import('./healthrecords/healthrecords.component').then(m => m.HealthRecordsComponent),
+        data: {
+          title: 'Health Records'
+        }
+      },
+      {
+        path: 'personal-information',
+        loadComponent: () => import('./personalinformation/personalinformation.component').then(m => m.PersonalinformationComponent),
+        data: {
+          title: 'Personal Information'
+        }
+      },
     ]
   }
 ];

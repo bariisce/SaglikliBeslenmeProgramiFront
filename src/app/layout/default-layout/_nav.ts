@@ -91,14 +91,7 @@ export const navItems: INavData[] = [
   {
     name: 'Patient',
     url: '/dietitianpatient',
-    iconComponent: { name: 'cil-user' },
-    children: [
-      {
-        name: 'Form Control',
-        url: '/forms/form-control',
-        iconComponent: { name: 'cil-description' }
-      },
-    ]
+    iconComponent: { name: 'cil-user' }
   },
 
   {
@@ -139,203 +132,35 @@ export const navItems: INavData[] = [
     name: 'Sea Meals',
     url: '/sea-meals',
     iconComponent: { name: 'cil-clear-all' },
-    children: [
-      {
-        name: 'Meals',
-        url: '/create-dietplan',
-        icon: 'nav-icon-bullet',
-        children: [
-          {
-            name: 'Meal 1', // Her bir yemeğe tıklanıldığında tarif sayfası açılacak
-            url: '/meal-1',
-            icon: 'nav-icon-bullet'
-          },
-          {
-            name: 'Meal 2',
-            url: '/meal-2',
-            icon: 'nav-icon-bullet'
-          },
-          {
-            name: 'Meal 3',
-            url: '/meal-3',
-            icon: 'nav-icon-bullet'
-          }
-        ]
-      },
-    ]
   },
   {
     name: 'Chicken Meals',
     url: '/chicken-meals',
     iconComponent: { name: 'cil-clear-all' },
-    children: [
-      {
-        name: 'Meals',
-        url: '/create-dietplan',
-        icon: 'nav-icon-bullet',
-        children: [
-          {
-            name: 'Meal 1',
-            url: '/meal-1', // Her bir yemeğe tıklanıldığında tarif sayfası açılacak
-            icon: 'nav-icon-bullet'
-          },
-          {
-            name: 'Meal 2',
-            url: '/meal-2',
-            icon: 'nav-icon-bullet'
-          },
-          {
-            name: 'Meal 3',
-            url: '/meal-3',
-            icon: 'nav-icon-bullet'
-          }
-        ]
-      },
-    ]
   },
   {
     name: 'Beef Meals',
     url: '/beef-meals',
     iconComponent: { name: 'cil-clear-all' },
-    children: [
-      {
-        name: 'Meals',
-        url: '/create-dietplan',
-        icon: 'nav-icon-bullet',
-        children: [
-          {
-            name: 'Meal 1',
-            url: '/meal-1', // Her bir yemeğe tıklanıldığında tarif sayfası açılacak
-            icon: 'nav-icon-bullet'
-          },
-          {
-            name: 'Meal 2',
-            url: '/meal-2',
-            icon: 'nav-icon-bullet'
-          },
-          {
-            name: 'Meal 3',
-            url: '/meal-3',
-            icon: 'nav-icon-bullet'
-          }
-        ]
-      },
-    ]
   },
   {
     name: 'Soups',
     url: '/soups',
     iconComponent: { name: 'cil-clear-all' },
-    children: [
-      {
-        name: 'Meals',
-        url: '/create-dietplan',
-        icon: 'nav-icon-bullet',
-        children: [
-          {
-            name: 'Meal 1',
-            url: '/meal-1', // Her bir yemeğe tıklanıldığında tarif sayfası açılacak
-            icon: 'nav-icon-bullet'
-          },
-          {
-            name: 'Meal 2',
-            url: '/meal-2',
-            icon: 'nav-icon-bullet'
-          },
-          {
-            name: 'Meal 3',
-            url: '/meal-3',
-            icon: 'nav-icon-bullet'
-          }
-        ]
-      },
-    ]
   },
   {
     name: 'Salads',
     url: '/salads',
     iconComponent: { name: 'cil-clear-all' },
-    children: [
-      {
-        name: 'Meals',
-        url: '/create-dietplan',
-        icon: 'nav-icon-bullet',
-        children: [
-          {
-            name: 'Meal 1',
-            url: '/meal-1', // Her bir yemeğe tıklanıldığında tarif sayfası açılacak
-            icon: 'nav-icon-bullet'
-          },
-          {
-            name: 'Meal 2',
-            url: '/meal-2',
-            icon: 'nav-icon-bullet'
-          },
-          {
-            name: 'Meal 3',
-            url: '/meal-3',
-            icon: 'nav-icon-bullet'
-          }
-        ]
-      },
-    ]
   },
   {
     name: 'Legumes',
     url: '/legume',
     iconComponent: { name: 'cil-clear-all' },
-    children: [
-      {
-        name: 'Meals',
-        url: '/create-dietplan',
-        icon: 'nav-icon-bullet',
-        children: [
-          {
-            name: 'Meal 1',
-            url: '/meal-1', // Her bir yemeğe tıklanıldığında tarif sayfası açılacak
-            icon: 'nav-icon-bullet'
-          },
-          {
-            name: 'Meal 2',
-            url: '/meal-2',
-            icon: 'nav-icon-bullet'
-          },
-          {
-            name: 'Meal 3',
-            url: '/meal-3',
-            icon: 'nav-icon-bullet'
-          }
-        ]
-      },
-    ]
   },
   {
     name: 'Cereal Meals',
     url: '/cereal-meals',
     iconComponent: { name: 'cil-clear-all' },
-    children: [
-      {
-        name: 'Meals',
-        url: '/create-dietplan',
-        icon: 'nav-icon-bullet',
-        children: [
-          {
-            name: 'Meal 1',
-            url: '/meal-1', // Her bir yemeğe tıklanıldığında tarif sayfası açılacak
-            icon: 'nav-icon-bullet'
-          },
-          {
-            name: 'Meal 2',
-            url: '/meal-2',
-            icon: 'nav-icon-bullet'
-          },
-          {
-            name: 'Meal 3',
-            url: '/meal-3',
-            icon: 'nav-icon-bullet'
-          }
-        ]
-      },
-    ]
   }
 ];

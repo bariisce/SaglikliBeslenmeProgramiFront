@@ -34,13 +34,13 @@ type CardColor = {
 }
 
 @Component({
-  selector: 'app-dietplanmeal',
-  templateUrl: './dietplanmeal.component.html',
-  styleUrls: ['./dietplanmeal.component.scss'],
+  selector: 'app-patient',
+  templateUrl: './patient.component.html',
+  styleUrls: ['./patient.component.scss'],
   standalone: true,
   imports: [RowComponent, ColComponent, TextColorDirective, CardComponent, CardHeaderComponent, CardBodyComponent, NgTemplateOutlet, CardTitleDirective, CardTextDirective, ButtonDirective, CardSubtitleDirective, CardLinkDirective, RouterLink, ListGroupDirective, ListGroupItemDirective, CardFooterComponent, BorderDirective, CardGroupComponent, GutterDirective, CardImgDirective, TabsComponent, TabsListComponent, IconDirective, TabDirective, TabsContentComponent, TabPanelComponent]
 })
-export class DietPlanMealComponent {
+export class PatientComponent {
 
   colors: CardColor[] = [
     { color: 'primary', textColor: 'primary' },

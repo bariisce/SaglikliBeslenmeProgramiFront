@@ -34,13 +34,13 @@ type CardColor = {
 }
 
 @Component({
-  selector: 'app-admin',
+  selector: 'app-patient',
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.scss'],
   standalone: true,
   imports: [RowComponent, ColComponent, TextColorDirective, CardComponent, CardHeaderComponent, CardBodyComponent, NgTemplateOutlet, CardTitleDirective, CardTextDirective, ButtonDirective, CardSubtitleDirective, CardLinkDirective, RouterLink, ListGroupDirective, ListGroupItemDirective, CardFooterComponent, BorderDirective, CardGroupComponent, GutterDirective, CardImgDirective, TabsComponent, TabsListComponent, IconDirective, TabDirective, TabsContentComponent, TabPanelComponent]
 })
-export class AllergiesComponent {
+export class AdminComponent {
 
   colors: CardColor[] = [
     { color: 'primary', textColor: 'primary' },

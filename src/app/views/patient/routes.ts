@@ -33,6 +33,13 @@ export const routes: Routes = [
           title: 'Personal Information'
         }
       },
+      {
+        path: 'dietmeals',
+        loadComponent: () => import('./dietmeals/dietmeals.component').then(m => m.DietmealsComponent),
+        data: {
+          title: 'Diet Meals'
+        }
+      },
     ]
   }
 ];

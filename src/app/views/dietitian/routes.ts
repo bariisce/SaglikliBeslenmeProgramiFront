@@ -13,24 +13,31 @@ export const routes: Routes = [
         pathMatch: 'full'
       },
       {
-        path: 'create-dietitian',
-        loadComponent: () => import('../admin/create-dietitian/create-dietitian.component').then(m => m.CreateDietitianComponent),
+        path: 'create-dietplan',
+        loadComponent: () => import('./dietplan/create-dietplan/create-dietplan.component').then(m => m.CreateDietplanComponent),
         data: {
           title: 'Create Dietitian'
         }
       },
       {
-        path: 'dietitian-list',
-        loadComponent: () => import('../admin/dietitians-list/dietitians-list.component').then(m => m.DietitiansListComponent),
+        path: 'dietplan-list',
+        loadComponent: () => import('./dietplan/dietplan-list/dietplan-list.component').then(m => m.DietplanListComponent),
         data: {
           title: 'Dietitians List'
         }
       },
       {
-        path: 'update-dietitian',
-        loadComponent: () => import('../admin/update-dietitian/update-dietitian.component').then(m => m.UpdateDietitianComponent),
+        path: 'update-dietplan',
+        loadComponent: () => import('./dietplan/update-dietplan/update-dietplan.component').then(m => m.UpdateDietplanComponent),
         data: {
           title: 'Update Dietitian'
+        }
+      },
+      {
+        path: 'patient-list',
+        loadComponent: () => import('./patient/patient.component').then(m => m.PatientComponent),
+        data: {
+          title: 'Dietitian Patient'
         }
       },
     ]

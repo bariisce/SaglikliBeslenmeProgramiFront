@@ -34,10 +34,17 @@ export const routes: Routes = [
         }
       },
       {
-        path: 'dietmeals',
+        path: 'diet-meals',
         loadComponent: () => import('./dietmeals/dietmeals.component').then(m => m.DietmealsComponent),
         data: {
           title: 'Diet Meals'
+        }
+      },
+      {
+        path: 'dietplan',
+        loadComponent: () => import('./dietplan/dietplan.component').then(m => m.DietplanComponent),
+        data: {
+          title: 'Diet Plan'
         }
       },
     ]

@@ -28,14 +28,6 @@ export const routes: Routes = [
         loadChildren: () => import('./views/dietitian/routes').then((m) => m.routes)
       },
       {
-        path: 'dietplan',
-        loadChildren: () => import('./views/dietplan/routes').then((m) => m.routes)
-      },
-      {
-        path: 'dietmeals',
-        loadChildren: () => import('./views/dietmeals/routes').then((m) => m.routes)
-      },
-      {
         path: 'mealcategories',
         loadChildren: () => import('./views/mealcategories/routes').then((m) => m.routes)
       },

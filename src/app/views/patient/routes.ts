@@ -13,27 +13,6 @@ export const routes: Routes = [
         pathMatch: 'full'
       },
       {
-        path: 'create-patient',
-        loadComponent: () => import('../admin/create-patient/create-patient.component').then(m => m.CreatePatientComponent),
-        data: {
-          title: 'Create Patient'
-        }
-      },
-      {
-        path: 'patient-list',
-        loadComponent: () => import('../admin/patients-list/patients-list.component').then(m => m.PatientsListComponent),
-        data: {
-          title: 'Patients List'
-        }
-      },
-      {
-        path: 'update-patient',
-        loadComponent: () => import('../admin/update-patient/update-patient.component').then(m => m.UpdatePatientComponent),
-        data: {
-          title: 'Update Patient'
-        }
-      },
-      {
         path: 'allergies',
         loadComponent: () => import('./allergies/allergies.component').then(m => m.AllergiesComponent),
         data: {

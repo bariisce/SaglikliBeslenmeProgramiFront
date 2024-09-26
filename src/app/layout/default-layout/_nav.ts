@@ -117,7 +117,7 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Health Records',
-    url: '/health-records',
+    url: 'patient/health-records',
     iconComponent: { name: 'cil-drop' }
   },
   {

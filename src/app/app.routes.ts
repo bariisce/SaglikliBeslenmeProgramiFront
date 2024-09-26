@@ -38,6 +38,10 @@ export const routes: Routes = [
       {
         path: 'mealcategories',
         loadChildren: () => import('./views/mealcategories/routes').then((m) => m.routes)
+      },
+      {
+        path: 'admin',
+        loadChildren: () => import('./views/admin/routes').then((m) => m.routes)
       }
     ]
   },

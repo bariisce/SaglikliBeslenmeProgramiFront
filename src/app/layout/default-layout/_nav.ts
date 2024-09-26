@@ -107,7 +107,7 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Diet Plan',
-    url: '/patient-dietplan',
+    url: '/dietplan',
     iconComponent: { name: 'cil-star' },
   },
   {
@@ -117,7 +117,7 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Health Records',
-    url: '/patient/health-records',
+    url: '/health-records',
     iconComponent: { name: 'cil-drop' }
   },
   {

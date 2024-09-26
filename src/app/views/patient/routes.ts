@@ -14,23 +14,23 @@ export const routes: Routes = [
       },
       {
         path: 'create-patient',
-        loadComponent: () => import('./create-patient/create-patient.component').then(m => m.CreatePatientComponent),
+        loadComponent: () => import('../admin/create-patient/create-patient.component').then(m => m.CreatePatientComponent),
         data: {
           title: 'Create Patient'
         }
       },
       {
         path: 'patient-list',
-        loadComponent: () => import('./patients-list/patients-list.component').then(m => m.PatientsListComponent),
+        loadComponent: () => import('../admin/patients-list/patients-list.component').then(m => m.PatientsListComponent),
         data: {
-          title: 'Dietitians List'
+          title: 'Patients List'
         }
       },
       {
         path: 'update-patient',
-        loadComponent: () => import('./update-patient/update-patient.component').then(m => m.UpdatePatientComponent),
+        loadComponent: () => import('../admin/update-patient/update-patient.component').then(m => m.UpdatePatientComponent),
         data: {
-          title: 'Update Dietitian'
+          title: 'Update Patient'
         }
       },
       {
@@ -41,7 +41,7 @@ export const routes: Routes = [
         }
       },
       {
-        path: 'healthrecords',
+        path: 'health-records',
         loadComponent: () => import('./healthrecords/healthrecords.component').then(m => m.HealthRecordsComponent),
         data: {
           title: 'Health Records'

@@ -16,7 +16,7 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Patient',
-    url: '/theme/patient',
+    url: '/admin/patient',
     iconComponent: { name: 'cil-user' },
     children: [
       {
@@ -34,17 +34,12 @@ export const navItems: INavData[] = [
         url: '/update-patient',
         iconComponent: { name: 'cil-pencil' }
       },
-      {
-        name: '',
-        url: '/base/carousel',
-        icon: 'nav-icon-bullet'
-      },
     ]
   },
 
   {
     name: 'Dietitian',
-    url: '/theme/dietitian',
+    url: '/admin/dietitian',
     linkProps: { fragment: 'headings' },
     iconComponent: { name: 'cil-user' },
     children: [
@@ -62,11 +57,6 @@ export const navItems: INavData[] = [
         name: 'Update Dietitian',
         url: '/update-dietitian',
         iconComponent: { name: 'cil-pencil' }
-      },
-      {
-        name: '',
-        url: '/base/carousel',
-        icon: 'nav-icon-bullet'
       },
 
     ]
@@ -95,11 +85,6 @@ export const navItems: INavData[] = [
         url: '/base/cards',
         icon: 'nav-icon-bullet'
       },
-      {
-        name: '',
-        url: '/base/carousel',
-        icon: 'nav-icon-bullet'
-      },
 
     ]
   },
@@ -122,7 +107,7 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Diet Plan',
-    url: '/patient-dietplan',
+    url: '/dietplan',
     iconComponent: { name: 'cil-star' },
   },
   {
@@ -132,7 +117,7 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Health Records',
-    url: '/patient/health-records',
+    url: '/health-records',
     iconComponent: { name: 'cil-drop' }
   },
   {

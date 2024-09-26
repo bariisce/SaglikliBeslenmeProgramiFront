@@ -3,7 +3,7 @@ import {DietmealsComponent} from '../dietmeals/dietmeals.component'
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'dietmeals',
     component: DietmealsComponent,
     data: {
       title: 'DietMeals'

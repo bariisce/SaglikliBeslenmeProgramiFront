@@ -104,28 +104,6 @@ export const navItems: INavData[] = [
     ]
   },
   {
-    name: 'Meal Categories',
-    url: '/meal-categories',
-    icon: 'cil-clear-all',
-    /*children: [
-      {
-        name: '',
-        url: '/buttons/buttons',
-        icon: 'nav-icon-bullet'
-      },
-      {
-        name: '',
-        url: '/buttons/button-groups',
-        icon: 'nav-icon-bullet'
-      },
-      {
-        name: '',
-        url: '/buttons/dropdowns',
-        icon: 'nav-icon-bullet'
-      }
-    ]*/
-  },
-  {
     name: 'Patient',
     url: '/dietitianpatient',
     iconComponent: { name: 'cil-user' },

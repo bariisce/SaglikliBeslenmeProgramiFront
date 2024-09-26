@@ -13,28 +13,14 @@ export const routes: Routes = [
         pathMatch: 'full'
       },
       {
-        path: 'create-dietplan',
+        path: 'dietplan',
         loadComponent: () => import('./dietplan/create-dietplan/create-dietplan.component').then(m => m.CreateDietplanComponent),
         data: {
-          title: 'Create Dietitian'
+          title: 'Diet Plan'
         }
       },
       {
-        path: 'dietplan-list',
-        loadComponent: () => import('./dietplan/dietplan-list/dietplan-list.component').then(m => m.DietplanListComponent),
-        data: {
-          title: 'Dietitians List'
-        }
-      },
-      {
-        path: 'update-dietplan',
-        loadComponent: () => import('./dietplan/update-dietplan/update-dietplan.component').then(m => m.UpdateDietplanComponent),
-        data: {
-          title: 'Update Dietitian'
-        }
-      },
-      {
-        path: 'patient-list',
+        path: 'dietitianpatient',
         loadComponent: () => import('./patient/patient.component').then(m => m.PatientComponent),
         data: {
           title: 'Dietitian Patient'

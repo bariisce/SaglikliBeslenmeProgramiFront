@@ -18,48 +18,12 @@ export const navItems: INavData[] = [
     name: 'Patient',
     url: '/admin/patient',
     iconComponent: { name: 'cil-user' },
-    children: [
-      {
-        name: 'Create Patient',
-        url: '/create-patient',
-        iconComponent: { name: 'cil-user-follow' }
-      },
-      {
-        name: 'Patients List',
-        url: '/patient-list',
-        iconComponent: { name: 'cil-list' }
-      },
-      {
-        name: 'Update Patient',
-        url: '/update-patient',
-        iconComponent: { name: 'cil-pencil' }
-      },
-    ]
   },
 
   {
     name: 'Dietitian',
     url: '/admin/dietitian',
-    linkProps: { fragment: 'headings' },
     iconComponent: { name: 'cil-user' },
-    children: [
-      {
-        name: 'Create Dietitian',
-        url: '/create-dietitian',
-        iconComponent: { name: 'cil-user-follow' }
-      },
-      {
-        name: 'Dietitians List',
-        url: '/dietitians-list',
-        iconComponent: { name: 'cil-list' }
-      },
-      {
-        name: 'Update Dietitian',
-        url: '/update-dietitian',
-        iconComponent: { name: 'cil-pencil' }
-      },
-
-    ]
   },
   {
     name: 'Dietitian',
@@ -67,26 +31,8 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Diet Plan',
-    url: '/dietitiann/dietplan',
+    url: '/dietitian/dietplan',
     iconComponent: { name: 'cil-notes' },
-    children: [
-      {
-        name: 'Create Diet Plan',
-        url: '/create-dietplan',
-        iconComponent: { name: 'cil-plus' }
-      },
-      {
-        name: 'Update Diet Plan',
-        url: '/update-dietplan',
-        iconComponent: { name: 'cil-sync' }
-      },
-      {
-        name: 'Diet Plans List',
-        url: '/dietetian/dietplan',
-        icon: 'nav-icon-bullet'
-      },
-
-    ]
   },
   {
     name: 'Patient',
@@ -130,37 +76,37 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Sea Meals',
-    url: '/sea-meals',
+    url: 'mealcategories/sea-meals',
     iconComponent: { name: 'cil-clear-all' },
   },
   {
     name: 'Chicken Meals',
-    url: '/chicken-meals',
+    url: 'mealcategories/chicken-meals',
     iconComponent: { name: 'cil-clear-all' },
   },
   {
     name: 'Beef Meals',
-    url: '/beef-meals',
+    url: 'mealcategories/beef-meals',
     iconComponent: { name: 'cil-clear-all' },
   },
   {
     name: 'Soups',
-    url: '/soups',
+    url: 'mealcategories/soups',
     iconComponent: { name: 'cil-clear-all' },
   },
   {
     name: 'Salads',
-    url: '/salads',
+    url: 'mealcategories/salads',
     iconComponent: { name: 'cil-clear-all' },
   },
   {
     name: 'Legumes',
-    url: '/legume',
+    url: 'mealcategories/legume',
     iconComponent: { name: 'cil-clear-all' },
   },
   {
     name: 'Cereal Meals',
-    url: '/cereal-meals',
+    url: 'mealcategories/cereal-meals',
     iconComponent: { name: 'cil-clear-all' },
   }
 ];

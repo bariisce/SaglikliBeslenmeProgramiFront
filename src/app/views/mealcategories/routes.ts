@@ -13,21 +13,21 @@ export const routes: Routes = [
         pathMatch: 'full'
       },
       {
-        path: 'beef',
+        path: 'beef-meals',
         loadComponent: () => import('./beef/meals/meals.component').then(m => m.MealsComponent),
         data: {
           title: 'Beef'
         }
       },
       {
-        path: 'cereal',
+        path: 'cereal-meals',
         loadComponent: () => import('./cereal/meals/meals.component').then(m => m.MealsComponent),
         data: {
           title: 'Cereal'
         }
       },
       {
-        path: 'chicken',
+        path: 'chicken-meals',
         loadComponent: () => import('./chicken/meals/meals.component').then(m => m.MealsComponent),
         data: {
           title: 'Chicken'
@@ -41,21 +41,21 @@ export const routes: Routes = [
         }
       },
       {
-        path: 'salad',
+        path: 'salads',
         loadComponent: () => import('./salad/meals/meals.component').then(m => m.MealsComponent),
         data: {
           title: 'Salad'
         }
       },
       {
-        path: 'seameal',
+        path: 'sea-meals',
         loadComponent: () => import('./seameal/meals/meals.component').then(m => m.MealsComponent),
         data: {
-          title: 'Seameal'
+          title: 'Sea MealS'
         }
       },
       {
-        path: 'soup',
+        path: 'soups',
         loadComponent: () => import('./soup/meals/meals.component').then(m => m.MealsComponent),
         data: {
           title: 'Soup'

@@ -25,6 +25,13 @@ export const routes: Routes = [
         data: {
           title: 'Dietitians'
         }
+      },
+      {
+        path: 'assignpatient',
+        loadComponent: () => import('./assignpatient/assignpatient.component').then(m => m.AssignpatientComponent),
+        data: {
+          title: 'Assign Patient'
+        }
       }
     ]
   }

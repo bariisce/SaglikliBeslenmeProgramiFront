@@ -1,1 +1,32 @@
-<p>dietitian works!</p>
+<div class="dietitian">
+  <h2>Dietitian Management</h2>
+  <button (click)="openCreateDialog()">Yeni Diyetisyen Ekle</button>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Fullname</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>İşlemler</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dietitian of dietitians">
+        <td>{{ dietitian.name }}</td>
+        <td>{{ dietitian.surname }}</td>
+        <td>{{ dietitian.fullname }}</td>
+        <td>{{ dietitian.username }}</td>
+        <td>{{ dietitian.email }}</td>
+        <td>{{ dietitian.role }}</td>
+        <td>
+          <button class="edit" (click)="editDietitian(dietitian)">Düzenle</button>
+          <button class="delete" (click)="deleteDietitian(dietitian.id)">Sil</button>
+          <button (click)="assignPatient(dietitian)">Hasta Ata</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

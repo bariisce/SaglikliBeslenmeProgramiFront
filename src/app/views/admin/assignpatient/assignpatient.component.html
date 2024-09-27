@@ -1,0 +1,16 @@
+<div class="assignment">
+  <h2>Hasta-Diyetisyen Ataması</h2>
+  <form (ngSubmit)="assignDietitian()">
+    <label for="patient">Hasta Seç:</label>
+    <select id="patient" [(ngModel)]="selectedPatient" name="patient">
+      <option *ngFor="let patient of patients" [value]="patient.id">{{ patient.name }}</option>
+    </select>
+
+    <label for="dietitian">Diyetisyen Seç:</label>
+    <select id="dietitian" [(ngModel)]="selectedDietitian" name="dietitian">
+      <option *ngFor="let dietitian of dietitians" [value]="dietitian.id">{{ dietitian.name }}</option>
+    </select>
+
+    <button type="submit">Atama Yap</button>
+  </form>
+</div>

@@ -1,0 +1,30 @@
+.beefdetail {
+  text-align: center;
+  img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  ul li {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+
+  h3 {
+    margin-top: 20px;
+  }
+
+  p {
+    font-size: 16px;
+    text-align: left;
+    margin-top: 10px;
+    line-height: 1.6;
+  }
+}

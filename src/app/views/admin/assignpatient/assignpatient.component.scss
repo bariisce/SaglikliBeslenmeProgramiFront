@@ -1,0 +1,55 @@
+.assignment {
+  max-width: 600px; /* Form genişliği */
+  margin: 20px auto; /* Ortalamak için */
+  padding: 20px;
+  border: 1px solid #ddd; /* Kenar çizgisi */
+  border-radius: 8px; /* Kenar yuvarlama */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+  background-color: #f9f9f9; /* Arka plan rengi */
+
+  h2 {
+    text-align: center; /* Başlığı ortala */
+    color: #333; /* Başlık rengi */
+    margin-bottom: 20px; /* Alt boşluk */
+  }
+
+  form {
+    display: flex;
+    flex-direction: column; /* Dikey hizalama */
+
+    label {
+      margin-bottom: 10px; /* Etiketler arasında boşluk */
+      font-weight: bold; /* Kalın yazı */
+      color: #555; /* Etiket rengi */
+    }
+
+    select {
+      margin-bottom: 20px; /* Seçenekler arasında boşluk */
+      padding: 10px; /* İç boşluk */
+      border: 1px solid #ccc; /* Kenar çizgisi */
+      border-radius: 4px; /* Kenar yuvarlama */
+      font-size: 16px; /* Yazı boyutu */
+      transition: border-color 0.3s; /* Kenar rengi geçiş efekti */
+
+      &:focus {
+        border-color: #007bff; /* Odaklandığında kenar rengi */
+        outline: none; /* Kenar çerçevesini kaldır */
+      }
+    }
+
+    button {
+      padding: 10px; /* İç boşluk */
+      border: none; /* Kenar çizgisi yok */
+      border-radius: 4px; /* Kenar yuvarlama */
+      background-color: #007bff; /* Arka plan rengi */
+      color: #fff; /* Yazı rengi */
+      font-size: 16px; /* Yazı boyutu */
+      cursor: pointer; /* İmleç değişimi */
+      transition: background-color 0.3s; /* Geçiş efekti */
+
+      &:hover {
+        background-color: #0056b3; /* Üzerine gelindiğinde arka plan rengi */
+      }
+    }
+  }
+}

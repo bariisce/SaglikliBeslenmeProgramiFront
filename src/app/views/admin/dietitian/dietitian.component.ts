@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dietitian',
@@ -12,7 +13,7 @@ export class DietitianComponent {
   selectedPatient: number = 0;
   selectedDietitian: number = 0;
 
-  constructor(){
+  constructor(private router: Router){
     this.selectedPatient = 1;
     this.selectedDietitian = 2
   }
@@ -22,12 +23,12 @@ export class DietitianComponent {
   ];
 
   openCreateDialog() {
-    console.log('Yeni Diyetisyen Ekle tıklandı.');
+    this.router.navigate(['admin/create-dietitian'])
   }
 
 
   editDietitian(dietitian: any) {
-    console.log('Diyetisyen düzenleniyor:', dietitian);
+    this.router.navigate(['admin/update-dietitian'])
   }
 
   deleteDietitian(id: number) {
@@ -36,6 +37,6 @@ export class DietitianComponent {
   }
 
   assignPatient(dietitian: any) {
-    console.log("Hasta Atanıyor:", dietitian);
+    this.router.navigate(['admin/assignpatient'])
   }
 }

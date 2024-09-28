@@ -1,0 +1,40 @@
+<div class="create-dietitian">
+  <h2>Diyetisyen Ekle</h2>
+  <form (ngSubmit)="onSubmit()">
+    <label for="name">Ad:</label>
+    <input type="text" id="name" [(ngModel)]="dietitian.name" name="name" required />
+
+    <label for="surname">Soyad:</label>
+    <input type="text" id="surname" [(ngModel)]="dietitian.surname" name="surname" required />
+
+    <label for="fullname">Tam İsim:</label>
+    <input type="text" id="fullname" [(ngModel)]="dietitian.fullname" name="fullname" required />
+
+    <label for="username">Kullanıcı Adı:</label>
+    <input type="text" id="username" [(ngModel)]="dietitian.username" name="username" required />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="dietitian.email" name="email" required />
+
+    <label for="password">Şifre:</label>
+    <input type="password" id="password" [(ngModel)]="dietitian.password" name="password" required />
+
+    <label for="birthdate">Doğum Tarihi:</label>
+    <input type="date" id="birthdate" [(ngModel)]="dietitian.birthdate" name="birthdate" required />
+
+    <label for="gender">Cinsiyet:</label>
+    <select id="gender" [(ngModel)]="dietitian.gender" name="gender" required>
+      <option value="male">Erkek</option>
+      <option value="female">Kadın</option>
+      <option value="other">Diğer</option>
+    </select>
+
+    <label for="age">Yaş:</label>
+    <input type="number" id="age" [(ngModel)]="dietitian.age" name="age" required />
+
+    <label for="specialization">Uzmanlık Alanı:</label>
+    <input type="text" id="specialization" [(ngModel)]="dietitian.specialization" name="specialization" required />
+
+    <button type="submit">Ekle</button>
+  </form>
+</div>

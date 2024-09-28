@@ -1,0 +1,12 @@
+<div class="beefdetail">
+  <h2>{{ meal.name }}</h2>
+  <img [src]="meal.image" alt="{{ meal.name }}" />
+
+  <h3>Malzemeler:</h3>
+  <ul>
+    <li *ngFor="let ingredient of meal.ingredients">{{ ingredient }}</li>
+  </ul>
+
+  <h3>Tarif:</h3>
+  <p>{{ meal.recipe }}</p>
+</div>

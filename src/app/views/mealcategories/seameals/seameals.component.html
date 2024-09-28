@@ -1,0 +1,7 @@
+<div class="seameals">
+  <h2>Seafood Meals</h2>
+  <div *ngFor="let meal of meals" class="meal-card" (click)="goToMealDetail(meal)">
+    <img [src]="meal.image" alt="{{ meal.name }}" />
+    <p>{{ meal.name }}</p>
+  </div>
+</div>

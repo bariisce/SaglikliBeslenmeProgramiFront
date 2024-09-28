@@ -1,0 +1,25 @@
+.seameals {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .meal-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+  }
+}

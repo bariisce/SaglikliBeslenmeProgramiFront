@@ -26,6 +26,16 @@ export const navItems: INavData[] = [
     iconComponent: { name: 'cil-user' },
   },
   {
+    name: 'Meal Category',
+    url: '/admin/mealcategory',
+    iconComponent: { name: 'cil-menu' },
+  },
+  {
+    name: 'Meal',
+    url: '/admin/meal',
+    iconComponent: { name: 'cil-menu' },
+  },
+  {
     name: 'Dietitian',
     title: true
   },

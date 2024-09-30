@@ -8,5 +8,5 @@ export class HealthRecord {
   heartRate: number = 0;
   cholesterol: number = 0;
   bloodSugar: number = 0;
-  recordedDate: Date;
+  recordedDate: Date= new Date();
 }

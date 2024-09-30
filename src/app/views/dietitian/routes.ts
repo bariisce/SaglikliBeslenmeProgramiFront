@@ -12,20 +12,30 @@ export const routes: Routes = [
         redirectTo: 'dietitian',
         pathMatch: 'full'
       },
+  
       {
         path: 'dietplan',
-        loadComponent: () => import('./dietplan/create-dietplan/create-dietplan.component').then(m => m.CreateDietplanComponent),
+        loadComponent: () => import('./dietplan2/dietplan2.component').then(m => m.DietPlan2Component),
         data: {
-          title: 'Diet Plan'
+          title: 'Diet Plan List'
         }
       },
       {
-        path: 'dietitianpatient',
-        loadComponent: () => import('./patient/patient.component').then(m => m.PatientComponent),
+        path: 'create-dietplan2',
+        loadComponent: () => import('./create-dietplan2/create-dietplan2.component').then(m => m.CreateDietplan2Component),
         data: {
-          title: 'Dietitian Patient'
+          title: 'Create Diet Plan'
         }
       },
+      {
+        path: 'update-dietplan2',
+        loadComponent: () => import('./update-dietplan2/update-dietplan2.component').then(m=> m.UpdateDietplan2Component),
+        data: {
+          title: 'Create Diet Plan'
+        }
+      },
+      
+      
     ]
   }
 ];

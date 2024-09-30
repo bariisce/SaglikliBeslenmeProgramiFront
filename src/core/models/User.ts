@@ -10,7 +10,7 @@ export class User {
   phoneNumber: string="";
   userName: string = "";
   password: string = "";
-  birthDate: Date;
+  birthDate: Date= new Date();
   gender: string = "";
   age: number = 0;
   roleId: number=0;

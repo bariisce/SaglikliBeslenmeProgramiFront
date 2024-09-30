@@ -7,8 +7,8 @@ export class DietPlan {
   dietitianId: number = 0;
   dietitian: Dietitian = new Dietitian();
   dietPlanMeals: DietPlanMeal[] = [];
-  startDate: Date;
-  endDate: Date;
+  startDate: Date= new Date();
+  endDate: Date= new Date();
   caloriesPerDay: number = 0;
   details: string="";
   patientId: number = 0;

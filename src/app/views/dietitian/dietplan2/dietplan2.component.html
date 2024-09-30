@@ -1,0 +1,36 @@
+<div class="dietplan">
+    <h2>Diyet Planı</h2>
+    <button (click)="openCreateDialog()">Diyet Planı Oluştur</button>
+    <table>
+      <thead>
+        <tr>
+            <th>Diyet Planı ID</th>
+            <th>Diyetisyen ID</th>
+            <th>Hasta ID</th>
+            <th>Diyet Başlangıç Tarihi</th>
+            <th>Diyet Bitiş Tarihi</th>
+            <th>Günlük Kalori</th>
+            <th>Detaylar</th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dietplan of dietplans">
+            <td>{{ dietplan.DietPlanId }}</td> <!-- Diyet Planı ID -->
+            <td>{{ dietplan.DietitianId }}</td> <!-- Diyetisyen ID -->
+            <td>{{ dietplan.PatientId }}</td> <!-- Hasta ID -->
+            <td>{{ dietplan.StartDate }}</td> <!-- Diyet Başlangıç Tarihi -->
+            <td>{{ dietplan.EndDate }}</td> <!-- Diyet Bitiş Tarihi -->
+            <td>{{ dietplan.CaloriesPerDay }}</td> <!-- Günlük Kalori -->
+            <td>{{ dietplan.Details }}</td> <!-- Detaylar -->
+            <td>
+                <button class="edit" (click)="editDietPlan(dietplan)">Düzenle</button>
+                <button class="delete" (click)="deleteDietPlan(dietplan.DietitianId)">Sil</button>
+                <button (click)="assignDietPlan(dietplan)">Diyet Planı Ata</button>
+            </td>
+        </tr>
+    </tbody>
+    
+    </table>
+  </div>
+

@@ -1,1 +1,27 @@
-<p>healthrecords works!</p>
+<div class="healthrecords">
+  <h2>Health Records</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Tansiyon (mm/Hg)</th>
+        <th>Kalp Atışı (bpm)</th>
+        <th>Kolesterol (mg/dL)</th>
+        <th>Kan Şekeri (mg/dl)</th>
+        <th>Kayıt Zamanı</th>
+        <th>İlaçlar</th>
+        <th>Medikal Durumlar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let record of healthrecords">
+        <td>{{ record.bloodPressure }}</td>
+        <td>{{ record.heartRate }}</td>
+        <td>{{ record.cholesterol }}</td>
+        <td>{{ record.bloodSugar }}</td>
+        <td>{{ record.recordTime }}</td>
+        <td>{{ record.medications }}</td>
+        <td>{{ record.medicalConditions }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

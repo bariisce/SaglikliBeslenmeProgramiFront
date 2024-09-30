@@ -20,7 +20,20 @@ export class HealthRecordsComponent {
     { id: 2, bloodPressure: "122/84", heartRate: "72", cholesterol: "150", bloodSugar: '93', recordTime: '30/09/2024-13:47', medications: 'Hasta', medicalConditions: 'Durum' },
   ];
 
-  patientHealthRecord(patient: any){
+  openCreateDialog() {
+    this.router.navigate(['patient/create-healthrecords'])
+  }
+
+  editHealthRecord(record: any) {
+    this.router.navigate(['patient/update-healthrecords'])
+  }
+
+  deleteHealthRecord(id: number) {
+    console.log('Sağlık kaydı siliniyor, ID:', id);
+    this.healthrecords = this.healthrecords.filter(d => d.id !== id);
+  }
+
+  patientHealthRecord(record: any){
     this.router.navigate(['patient/healthrecords'])
   }
 }

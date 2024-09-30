@@ -1,5 +1,6 @@
 <div class="healthrecords">
   <h2>Health Records</h2>
+  <button (click)="openCreateDialog()">Yeni Sağlık Kaydı Ekle</button>
   <table>
     <thead>
       <tr>
@@ -21,6 +22,10 @@
         <td>{{ record.recordTime }}</td>
         <td>{{ record.medications }}</td>
         <td>{{ record.medicalConditions }}</td>
+        <td>
+          <button class="edit" (click)="editHealthRecord(record)">Düzenle</button>
+          <button class="delete" (click)="deleteHealthRecord(record.id)">Sil</button>
+        </td>
       </tr>
     </tbody>
   </table>

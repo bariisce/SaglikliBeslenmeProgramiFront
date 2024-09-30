@@ -47,6 +47,20 @@ export const routes: Routes = [
           title: 'Diet Plan'
         }
       },
+      {
+        path: 'create-healthrecords',
+        loadComponent: () => import('./create-healthrecords/create-healthrecords.component').then(m => m.CreateHealthRecordsComponent),
+        data: {
+          title: 'Create Health Records'
+        }
+      },
+      {
+        path: 'update-healthrecords',
+        loadComponent: () => import('./update-healthrecords/update-healthrecords.component').then(m => m.UpdateHealthRecordsComponent),
+        data: {
+          title: 'Update Health Records'
+        }
+      },
     ]
   }
 ];

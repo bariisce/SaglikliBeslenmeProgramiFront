@@ -1,0 +1,28 @@
+<div class="create-healthrecords">
+    <h2>Sağlık Kaydı Ekle</h2>
+    <form (ngSubmit)="onSubmit()">
+      <label for="name">Tansiyon (mm/Hg):</label>
+      <input id="name" [(ngModel)]="healthrecords.bloodPressure" name="bloodPressure" required />
+  
+      <label for="surname">Kalp Atışı (bpm):</label>
+      <input id="surname" [(ngModel)]="healthrecords.heartRate" name="heartRate" required />
+  
+      <label for="fullname">Kolesterol (mg/dL):</label>
+      <input id="fullname" [(ngModel)]="healthrecords.cholesterol" name="cholesterol" required />
+  
+      <label for="username">Kan Şekeri (mg/dl):</label>
+      <input id="username" [(ngModel)]="healthrecords.bloodSugar" name="bloodSugar" required />
+  
+      <label for="email">Kayıt Zamanı:</label>
+      <input type="email" id="email" [(ngModel)]="healthrecords.recordTime" name="recordTime" required />
+  
+      <label for="medications">İlaçlar:</label>
+      <textarea id="medications" [(ngModel)]="healthrecords.medications" name="medications"></textarea>
+  
+      <label for="medicalConditions">Medikal Durumlar:</label>
+      <textarea id="medicalConditions" [(ngModel)]="healthrecords.medicalConditions" name="medicalConditions"></textarea>
+    
+      <button type="submit">Sağlık Kaydı Ekle</button>
+    </form>
+  </div>
+  

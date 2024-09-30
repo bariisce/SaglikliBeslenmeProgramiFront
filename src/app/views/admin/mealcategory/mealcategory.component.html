@@ -1,0 +1,25 @@
+<div class="mealcategory">
+  <h2>Kategori Yönetimi</h2>
+
+  <button (click)="goToAddCategory()">Yeni Kategori Ekle</button>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Kategori Adı</th>
+        <th>Açıklama</th>
+        <th>İşlemler</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let category of categories">
+        <td>{{ category.name }}</td>
+        <td>{{ category.description }}</td>
+        <td>
+          <button class="edit" (click)="editCategory(category)">Düzenle</button>
+          <button class="delete" (click)="deleteCategory(category)">Sil</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

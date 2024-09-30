@@ -67,7 +67,49 @@ export const routes: Routes = [
         data: {
           title: 'Health Records'
         }
-      }
+      },
+      {
+        path: 'mealcategory',
+        loadComponent: () => import('./mealcategory/mealcategory.component').then(m => m.MealCategoryComponent),
+        data: {
+          title: 'Admin Meal Category'
+        }
+      },
+      {
+        path: 'create-mealcategory',
+        loadComponent: () => import('./create-mealcategory/create-mealcategory.component').then(m => m.CreateMealCategoryComponent),
+        data: {
+          title: 'Admin Create Meal Category'
+        }
+      },
+      {
+        path: 'update-mealcategory/:id',
+        loadComponent: () => import('./update-mealcategory/update-mealcategory.component').then(m => m.UpdateMealCategoryComponent),
+        data: {
+          title: 'Admin Update Meal Category'
+        }
+      },
+      {
+        path: 'meal',
+        loadComponent: () => import('./meal/meal.component').then(m => m.MealComponent),
+        data: {
+          title: 'Admin Meal'
+        }
+      },
+      {
+        path: 'admin-create-meal',
+        loadComponent: () => import('./create-meal/create-meal.component').then(m => m.CreateMealComponent),
+        data: {
+          title: 'Admin Create Meal'
+        }
+      },
+      {
+        path: 'admin-update-meal',
+        loadComponent: () => import('./update-meal/update-meal.component').then(m => m.UpdateMealComponent),
+        data: {
+          title: 'Admin Update Meal'
+        }
+      },
     ]
   }
 ];

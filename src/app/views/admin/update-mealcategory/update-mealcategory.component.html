@@ -1,0 +1,18 @@
+<div class="update-mealcategory">
+  <h2>Kategoriyi Güncelle</h2>
+
+  <form (ngSubmit)="updateCategory()">
+    <div class="form-group">
+      <label for="name">Kategori Adı:</label>
+      <input type="text" id="name" [(ngModel)]="category.name" name="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Açıklama:</label>
+      <textarea id="description" [(ngModel)]="category.description" name="description" rows="4" required></textarea>
+    </div>
+
+    <button type="submit" class="update">Kategori Güncelle</button>
+    <button type="button" class="cancel" (click)="cancel()">İptal</button>
+  </form>
+</div>

@@ -6,21 +6,17 @@
       <tr>
         <th>Name</th>
         <th>Surname</th>
-        <th>Fullname</th>
         <th>Username</th>
         <th>Email</th>
-        <th>Role</th>
         <th>İşlemler</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let patient of patients">
+      <tr *ngFor="let patient of user">
         <td>{{ patient.name }}</td>
         <td>{{ patient.surname }}</td>
-        <td>{{ patient.fullname }}</td>
         <td>{{ patient.username }}</td>
         <td>{{ patient.email }}</td>
-        <td>{{ patient.role }}</td>
         <td>
           <button class="edit" (click)="editPatient(patient)">Düzenle</button>
           <button class="delete" (click)="deletePatient(patient.id)">Sil</button>

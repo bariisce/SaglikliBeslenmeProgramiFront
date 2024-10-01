@@ -15,23 +15,23 @@ export const routes: Routes = [
   
       {
         path: 'dietplan',
-        loadComponent: () => import('./dietplan2/dietplan2.component').then(m => m.DietPlan2Component),
+        loadComponent: () => import('./dietplan/dietplan.component').then(m => m.DietPlanComponent),
         data: {
           title: 'Diet Plan List'
         }
       },
       {
-        path: 'create-dietplan2',
-        loadComponent: () => import('./create-dietplan2/create-dietplan2.component').then(m => m.CreateDietplan2Component),
+        path: 'create-dietplan',
+        loadComponent: () => import('./create-dietplan/create-dietplan.component').then(m => m.CreateDietplanComponent),
         data: {
           title: 'Create Diet Plan'
         }
       },
       {
-        path: 'update-dietplan2',
-        loadComponent: () => import('./update-dietplan2/update-dietplan2.component').then(m=> m.UpdateDietplan2Component),
+        path: 'update-dietplan',
+        loadComponent: () => import('./update-dietplan/update-dietplan.component').then(m=> m.UpdateDietplanComponent),
         data: {
-          title: 'Create Diet Plan'
+          title: 'Update Diet Plan'
         }
       },
       

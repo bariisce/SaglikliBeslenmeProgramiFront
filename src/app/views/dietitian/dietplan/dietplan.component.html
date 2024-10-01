@@ -16,13 +16,13 @@
     </thead>
     <tbody>
         <tr *ngFor="let dietplan of dietplans">
-            <td>{{ dietplan.DietPlanId }}</td> <!-- Diyet Planı ID -->
-            <td>{{ dietplan.DietitianId }}</td> <!-- Diyetisyen ID -->
-            <td>{{ dietplan.PatientId }}</td> <!-- Hasta ID -->
-            <td>{{ dietplan.StartDate }}</td> <!-- Diyet Başlangıç Tarihi -->
-            <td>{{ dietplan.EndDate }}</td> <!-- Diyet Bitiş Tarihi -->
-            <td>{{ dietplan.CaloriesPerDay }}</td> <!-- Günlük Kalori -->
-            <td>{{ dietplan.Details }}</td> <!-- Detaylar -->
+            <td>{{ dietplan.DietPlanId }}</td> 
+            <td>{{ dietplan.DietitianId }}</td> 
+            <td>{{ dietplan.PatientId }}</td> 
+            <td>{{ dietplan.StartDate }}</td> 
+            <td>{{ dietplan.EndDate }}</td> 
+            <td>{{ dietplan.CaloriesPerDay }}</td> 
+            <td>{{ dietplan.Details }}</td> 
             <td>
                 <button class="edit" (click)="editDietPlan(dietplan)">Düzenle</button>
                 <button class="delete" (click)="deleteDietPlan(dietplan.DietitianId)">Sil</button>
@@ -33,4 +33,5 @@
     
     </table>
   </div>
+
 

@@ -28,7 +28,7 @@ export const routes: Routes = [
       },
       {
         path: 'personal-information',
-        loadComponent: () => import('./personalinformation/personalinformation.component').then(m => m.PersonalinformationComponent),
+        loadComponent: () => import('./personalinformation/personalinformation.component').then(m => m.PersonalInformationComponent),
         data: {
           title: 'Personal Information'
         }
@@ -59,6 +59,20 @@ export const routes: Routes = [
         loadComponent: () => import('./update-healthrecords/update-healthrecords.component').then(m => m.UpdateHealthRecordsComponent),
         data: {
           title: 'Update Health Records'
+        }
+      },
+      {
+        path: 'create-personal-information',
+        loadComponent: () => import('./create-personalinformation/create-personalinformation.component').then(m => m.CreatePersonalInformationComponent),
+        data: {
+          title: 'Create Personal Information'
+        }
+      },
+      {
+        path: 'update-personal-information',
+        loadComponent: () => import('./update-personalinformation/update-personalinformation.component').then(m => m.UpdatePersonalInformationComponent),
+        data: {
+          title: 'Update Personal Information'
         }
       },
     ]

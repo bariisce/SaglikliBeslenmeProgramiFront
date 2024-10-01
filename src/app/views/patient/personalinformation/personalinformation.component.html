@@ -1,1 +1,39 @@
-<p>personalinformation works!</p>
+<div class="personal-information">
+  <h2>Bilgi Görüntüleme Ekranı</h2>
+  <button (click)="openCreateDialog()">Bilgi Ekle</button>
+  <table>
+    <thead>
+      <tr>
+        <th>Ad:</th>
+        <th>Soyad:</th>
+        <th>Tam Ad:</th>
+        <th>Kullanıcı Adı:</th>
+        <th>Email:</th>
+        <th>Şifre:</th>
+        <th>Doğum Tarihi:</th>
+        <th>Cinsiyet:</th>
+        <th>Yaş:</th>
+        <th>Ağırlık (kg):</th>
+        <th>Boy (cm):</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let info of personalinformation">
+        <td>{{ info.name }}</td>
+        <td>{{ info.surname }}</td>
+        <td>{{ info.fullname }}</td>
+        <td>{{ info.username }}</td>
+        <td>{{ info.email }}</td>
+        <td>{{ info.password }}</td>
+        <td>{{ info.birthdate }}</td>
+        <td>{{ info.gender }}</td>
+        <td>{{ info.age }}</td>
+        <td>{{ info.weight }}</td>
+        <td>{{ info.height }}</td>
+        <td>
+          <button class="edit" (click)="editPersonalInformation(info)">Güncelle</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

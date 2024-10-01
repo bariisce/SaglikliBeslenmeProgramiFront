@@ -5,13 +5,13 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-dietplan2',
+  selector: 'app-dietplan',
   standalone: true,
   imports: [CommonModule, FormsModule],
-  templateUrl: './dietplan2.component.html',
-  styleUrl: './dietplan2.component.scss'
+  templateUrl: './dietplan.component.html',
+  styleUrl: './dietplan.component.scss'
 })
-export class DietPlan2Component{
+export class DietPlanComponent{
 
   constructor(private router: Router){
 
@@ -38,12 +38,12 @@ export class DietPlan2Component{
 
 
   openCreateDialog() {
-    this.router.navigate(['dietitian/dietplan/create-dietplan'])
+    this.router.navigate(['dietitian/create-dietplan'])
   }
 
 
   editDietPlan (dietplan: any) {
-    this.router.navigate(['dietitan/update-dietplan2'])
+    this.router.navigate(['dietitian/update-dietplan'])
   }
 
   deleteDietPlan (id: number) {
@@ -52,7 +52,7 @@ export class DietPlan2Component{
   }
 
   assignDietPlan(dietplan: any) {
-    this.router.navigate(['dietitan/dietplan/assign-dietplan'])
+    this.router.navigate(['dietitian/dietplan/assign-dietplan'])
   }
   
 }

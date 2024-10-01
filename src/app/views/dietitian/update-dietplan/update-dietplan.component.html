@@ -1,0 +1,29 @@
+<div class="update-dietplan">
+    <h2>Diyet Planı Güncelle</h2>
+    <form (ngSubmit)="onSubmit()">
+      
+      <label for="dietPlanId">Diyet Planı ID:</label>
+      <input id="dietPlanId" [(ngModel)]="DietPlan.DietPlanId" name="dietPlanId" required  />
+  
+      <label for="dietitianId">Diyetisyen ID:</label>
+      <input id="dietitianId" [(ngModel)]="DietPlan.DietetianId" name="dietitianId" required />
+  
+      <label for="patientId">Hasta ID:</label>
+      <input id="patientId" [(ngModel)]="DietPlan.PatientId" name="patientId" required />
+  
+      <label for="startDate">Diyet Başlangıç Tarihi:</label>
+      <input type="date" id="startDate" [(ngModel)]="DietPlan.StartDate" name="startDate" required />
+  
+      <label for="endDate">Diyet Bitiş Tarihi:</label>
+      <input type="date" id="endDate" [(ngModel)]="DietPlan.EndDate" name="endDate" required />
+  
+      <label for="caloriesPerDay">Günlük Kalori:</label>
+      <input type="number" id="caloriesPerDay" [(ngModel)]="DietPlan.CaloriesPerDay" name="caloriesPerDay" required />
+  
+      <label for="details">Detaylar:</label>
+      <textarea id="details" [(ngModel)]="DietPlan.Details" name="details" required></textarea>
+  
+      <button type="submit">Diyet Planı Güncelle</button>
+    </form>
+  </div>
+  

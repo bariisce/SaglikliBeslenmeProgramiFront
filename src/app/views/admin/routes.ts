@@ -104,7 +104,7 @@ export const routes: Routes = [
         }
       },
       {
-        path: 'admin-update-meal',
+        path: 'admin-update-meal/:id',
         loadComponent: () => import('./update-meal/update-meal.component').then(m => m.UpdateMealComponent),
         data: {
           title: 'Admin Update Meal'

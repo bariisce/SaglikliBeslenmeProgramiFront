@@ -7,10 +7,10 @@ export class Patient {
   id: number=0;
   userId: number=0;
   user: User = new User();
-  weight: number=0;
-  height: number=0;
-  medicalCondition: string = ''
-  medication: string = ''
+  Weight: number=0;
+  Height: number=0;
+  MedicalCondition: string = ''
+  Medication: string = ''
   healthRecords: HealthRecord[] = [];
   patientAllergies: PatientAllergy[] = [];
   dietitianPatients: DietitianPatient[] = [];

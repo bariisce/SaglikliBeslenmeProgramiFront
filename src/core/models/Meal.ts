@@ -6,6 +6,7 @@ export class Meal {
   mealName: string='';
   description: string='';
   calory: number=0;
+  image: string=''
   categoryId: number=0;
   categories: MealCategory=new MealCategory();
   dietPlanMeals: DietPlanMeal[]=[];

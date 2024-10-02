@@ -47,15 +47,14 @@ export class CreatePatientComponent implements OnInit {
   submit() {
     if (this.createPatientForm.valid) {
       const user = new User(); // Create a new instance of User
-      user.Name = this.createPatientForm.value.name;
-      user.Surname = this.createPatientForm.value.surname;
-      user.Email = this.createPatientForm.value.email;
-      user.PhoneNumber = this.createPatientForm.value.phoneNumber;
-      user.Username = this.createPatientForm.value.username;
-      user.Password = this.createPatientForm.value.password;
-      user.BirthDate = this.createPatientForm.value.birthdate; // Ensure proper date format
-      user.Gender = this.createPatientForm.value.gender;
-      user.Age = this.createPatientForm.value.age;
+      user.name = this.createPatientForm.value.name;
+      user.surname = this.createPatientForm.value.surname;
+      user.email = this.createPatientForm.value.email;
+      user.phonenumber = this.createPatientForm.value.phoneNumber;
+      user.username = this.createPatientForm.value.username;
+      user.password = this.createPatientForm.value.password;
+      user.gender = this.createPatientForm.value.gender;
+      user.age = this.createPatientForm.value.age;
       user.roleId = 3; // Assuming '2' is the role ID for patients; adjust accordingly
       user.role = new Role(); // Initialize role if necessary
 

@@ -30,39 +30,21 @@ export class ApiService {
   }
 
 
-  addUser(entity: object) {
-    return this.http
-      .request<BaseResponse>('post', environment.api_url + '/User/Create', {
-        body: entity,
-      })
-      .pipe(share());
+  addUser(userData: User) {
+    return this.http.post(`${this.endpoint}/User/Create`,userData)
   }
+
+  addPatient(patientData: any) {
+    return this.http.post(`${this.endpoint}/Patient/Create`,patientData)
+  }
+
+
   updateUser(id: number, newEntity: object) {
+
     return this.http
       .request<BaseResponse>(
         'put',
         environment.api_url + '/User/Update?id=' + id,
-        { body: newEntity }
-      )
-      .pipe(share());
-  }
-
-
-
-  addGroup(entity: object) {
-    return this.http
-      .request<BaseResponse>('post', environment.api_url + '/Group/Create', {
-        body: entity,
-      })
-      .pipe(share());
-  }
-
-
-  updateProject(id: number, newEntity: object) {
-    return this.http
-      .request<BaseResponse>(
-        'put',
-        environment.api_url + '/Project/Update?id=' + id,
         { body: newEntity }
       )
       .pipe(share());

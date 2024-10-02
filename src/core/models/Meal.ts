@@ -7,6 +7,9 @@ export class Meal {
   description: string='';
   calory: number=0;
   image: string=''
+  protein: string = '';
+  carbonhydrate: string = '';
+  fat: string = '';
   categoryId: number=0;
   categories: MealCategory=new MealCategory();
   dietPlanMeals: DietPlanMeal[]=[];

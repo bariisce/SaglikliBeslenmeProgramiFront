@@ -7,10 +7,12 @@ export class DietPlan {
   dietitianId: number = 0;
   dietitian: Dietitian = new Dietitian();
   dietPlanMeals: DietPlanMeal[] = [];
-  startDate: Date= new Date();
-  endDate: Date= new Date();
+  dietplanname: string = '';
+  startDate: string='';
+  endDate: string='';
   caloriesPerDay: number = 0;
   details: string="";
   patientId: number = 0;
+  status: boolean = true
   patients: Patient = new Patient();
 }

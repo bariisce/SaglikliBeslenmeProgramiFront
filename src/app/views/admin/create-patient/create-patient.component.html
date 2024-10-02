@@ -1,50 +1,54 @@
-<div class="create-patient">
-  <h2>Hasta Ekle</h2>
-  <form (ngSubmit)="onSubmit()">
-    <label for="name">Ad:</label>
-    <input id="name" [(ngModel)]="patient.name" name="name" required />
-
-    <label for="surname">Soyad:</label>
-    <input id="surname" [(ngModel)]="patient.surname" name="surname" required />
-
-    <label for="fullname">Tam Ad:</label>
-    <input id="fullname" [(ngModel)]="patient.fullname" name="fullname" required />
-
-    <label for="username">Kullanıcı Adı:</label>
-    <input id="username" [(ngModel)]="patient.username" name="username" required />
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" [(ngModel)]="patient.email" name="email" required />
-
-    <label for="password">Şifre:</label>
-    <input type="password" id="password" [(ngModel)]="patient.password" name="password" required />
-
-    <label for="birthdate">Doğum Tarihi:</label>
-    <input type="date" id="birthdate" [(ngModel)]="patient.birthdate" name="birthdate" required />
-
-    <label for="gender">Cinsiyet:</label>
-    <select id="gender" [(ngModel)]="patient.gender" name="gender" required>
-      <option value="">Seçin</option>
-      <option value="male">Erkek</option>
-      <option value="female">Kadın</option>
-      <option value="other">Diğer</option>
-    </select>
-
-    <label for="age">Yaş:</label>
-    <input type="number" id="age" [(ngModel)]="patient.age" name="age" required />
-
-    <label for="weight">Ağırlık (kg):</label>
-    <input type="number" id="weight" [(ngModel)]="patient.weight" name="weight" required />
-
-    <label for="height">Boy (cm):</label>
-    <input type="number" id="height" [(ngModel)]="patient.height" name="height" required />
-
-    <label for="medicalConditions">Medikal Durumlar:</label>
-    <textarea id="medicalConditions" [(ngModel)]="patient.medicalConditions" name="medicalConditions"></textarea>
-
-    <label for="medications">İlaçlar:</label>
-    <textarea id="medications" [(ngModel)]="patient.medications" name="medications"></textarea>
-
-    <button type="submit">Hasta Ekle</button>
-  </form>
-</div>
+<form [formGroup]="createPatientForm" (ngSubmit)="submit()" class="form-container">
+  <h2>Create Patient</h2>
+  <div class="form-field">
+    <label for="name">First Name</label>
+    <input id="name" formControlName="name" />
+  </div>
+  <div class="form-field">
+    <label for="surname">Last Name</label>
+    <input id="surname" formControlName="surname" />
+  </div>
+  <div class="form-field">
+    <label for="email">Email</label>
+    <input id="email" formControlName="email" type="email" />
+  </div>
+  <div class="form-field">
+    <label for="phoneNumber">Phone Number</label>
+    <input id="phoneNumber" formControlName="phoneNumber" />
+  </div>
+  <div class="form-field">
+    <label for="username">Username</label>
+    <input id="username" formControlName="username" />
+  </div>
+  <div class="form-field">
+    <label for="password">Password</label>
+    <input id="password" formControlName="password" type="password" />
+  </div>
+  <div class="form-field">
+    <label for="birthDate">Birth Date</label>
+    <input id="birthDate" formControlName="birthdate" type="date" />
+  </div>
+  <div class="form-field">
+    <label for="gender">Gender</label>
+    <input id="gender" formControlName="gender" />
+  </div>
+  <div>
+    <label for="height">Height</label>
+    <input id="height" formControlName="height" type="number" required />
+  </div>
+  <div>
+    <label for="weight">Weight</label>
+    <input id="weight" formControlName="weight" type="number" required />
+  </div>
+  <div>
+    <label for="medicalcondition">Medical Conditions</label>
+    <input id="medicalcondition" formControlName="medicalcondition" required />
+  </div>
+  <div>
+    <label for="medication">Medications</label>
+    <input id="medication" formControlName="medication" required />
+  </div>
+  <div class="form-actions">
+    <button type="submit">Create Patient</button>
+  </div>
+</form>

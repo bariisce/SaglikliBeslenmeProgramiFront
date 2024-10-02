@@ -9,6 +9,6 @@ export class DietitianPatient {
   patientId: number = 0;
   patients: Patient = new Patient();
   dietPlanId: number = 0;
-  dietPlans: DietPlan[] = [];
+  dietPlans: DietPlan = new DietPlan();
 
 }

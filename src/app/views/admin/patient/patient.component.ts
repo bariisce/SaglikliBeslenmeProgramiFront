@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService} from '../../../../core/services/api/api.service'
-import { Patient } from 'src/core/models/Patient';
-import { User } from 'src/core/models/User';
 import { HttpClientModule } from '@angular/common/http';
 
 @Component({

@@ -1,33 +1,91 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import {
+  FormBuilder,
+  FormGroup,
+  FormsModule,
+  Validators,
+  ReactiveFormsModule,
+} from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
+import { ApiService } from 'src/core/services/api/api.service';
+import { Router } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { User } from 'src/core/models/User';
+import { Role } from 'src/core/models/Role';
 @Component({
   selector: 'app-create-patient',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, HttpClientModule],
+  providers: [ApiService],
   templateUrl: './create-patient.component.html',
-  styleUrl: './create-patient.component.scss'
+  styleUrl: './create-patient.component.scss',
 })
-export class CreatePatientComponent {
-  patient = {
-    name: '',
-    surname: '',
-    fullname: '',
-    username: '',
-    email: '',
-    password: '',
-    birthdate: '',
-    gender: '',
-    age: null as number | null,
-    weight: null as number | null,
-    height: null as number | null,
-    medicalConditions: '',
-    medications: ''
-  };
+export class CreatePatientComponent implements OnInit {
+  createPatientForm!: FormGroup;
+  constructor(
+    private fb: FormBuilder,
+    private apiService: ApiService,
+    private router: Router
+  ) {
+    this.createPatientForm = this.fb.group({
+      name: ['', Validators.required],
+      surname: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      phoneNumber: ['', Validators.required],
+      username: ['', Validators.required],
+      password: ['', Validators.required],
+      birthdate: ['', Validators.required],
+      gender: ['', Validators.required],
+      weight: ['', Validators.required],
+      height: ['', Validators.required],
+      medicalcondition: [''],
+      medication: [''],
+    });
+  }
+  ngOnInit(): void {}
 
-  onSubmit() {
-    console.log('Yeni hasta bilgileri:', this.patient);
-    // Burada hastayı ekleme işlemlerini gerçekleştirin
+  submit() {
+    if (this.createPatientForm.valid) {
+      const user = new User(); // Create a new instance of User
+      user.name = this.createPatientForm.value.name;
+      user.surname = this.createPatientForm.value.surname;
+      user.email = this.createPatientForm.value.email;
+      user.phonenumber = this.createPatientForm.value.phoneNumber;
+      user.username = this.createPatientForm.value.username;
+      user.password = this.createPatientForm.value.password;
+      user.gender = this.createPatientForm.value.gender;
+      user.age = this.createPatientForm.value.age;
+      user.roleId = 3; // Assuming '2' is the role ID for patients; adjust accordingly
+      user.role = new Role(); // Initialize role if necessary
+
+      this.apiService.addUser(user).subscribe(
+        (userResponse: any) => { // Use the User class
+          const patientData = {
+            userId: userResponse.id, // Now TypeScript recognizes 'id'
+            weight: this.createPatientForm.value.weight,
+            height: this.createPatientForm.value.height,
+            medicalcondition: this.createPatientForm.value.medicalcondition,
+            medication: this.createPatientForm.value.medications,
+            createdAt: new Date(),
+            isDeleted: false
+          };
+
+          this.apiService.addPatient(patientData).subscribe(
+            () => {
+              console.log('Patient created successfully');
+              // Optionally navigate or reset the form
+            },
+            (error) => {
+              console.error('Error creating patient:', error);
+            }
+          );
+        },
+        (error) => {
+          console.error('Error creating user:', error);
+        }
+      );
+    } else {
+      console.error('Form is invalid');
+    }
   }
 }

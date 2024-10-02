@@ -9,4 +9,6 @@ export class Dietitian {
   dietitianPatients: DietitianPatient[] = [];
   dietPlans: DietPlan[] = [];
   specialization: string = "";
+  experienceyears: number =0;
+  isactive: boolean = true;
 }

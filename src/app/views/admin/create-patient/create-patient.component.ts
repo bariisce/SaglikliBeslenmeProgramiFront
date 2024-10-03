@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -9,83 +9,60 @@ import {
 import { CommonModule } from '@angular/common';
 import { ApiService } from 'src/core/services/api/api.service';
 import { Router } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
-import { User } from 'src/core/models/User';
-import { Role } from 'src/core/models/Role';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { cilWeightlifitng } from '@coreui/icons';
+
 @Component({
   selector: 'app-create-patient',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, HttpClientModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatSelectModule,
+  ],
   providers: [ApiService],
   templateUrl: './create-patient.component.html',
   styleUrl: './create-patient.component.scss',
 })
-export class CreatePatientComponent implements OnInit {
-  createPatientForm!: FormGroup;
+export class CreatePatientComponent {
+  createPatientForm: FormGroup;
+
   constructor(
     private fb: FormBuilder,
-    private apiService: ApiService,
-    private router: Router
+    public dialogRef: MatDialogRef<CreatePatientComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any
   ) {
     this.createPatientForm = this.fb.group({
       name: ['', Validators.required],
       surname: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      phoneNumber: ['', Validators.required],
+      phonenumber: ['', Validators.required],
       username: ['', Validators.required],
       password: ['', Validators.required],
-      birthdate: ['', Validators.required],
       gender: ['', Validators.required],
-      weight: ['', Validators.required],
-      height: ['', Validators.required],
-      medicalcondition: [''],
-      medication: [''],
+      age: ['', Validators.required],
+      roleId: ['',]
+
     });
   }
-  ngOnInit(): void {}
 
-  submit() {
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+  onSubmit(): void {
     if (this.createPatientForm.valid) {
-      const user = new User(); // Create a new instance of User
-      user.name = this.createPatientForm.value.name;
-      user.surname = this.createPatientForm.value.surname;
-      user.email = this.createPatientForm.value.email;
-      user.phonenumber = this.createPatientForm.value.phoneNumber;
-      user.username = this.createPatientForm.value.username;
-      user.password = this.createPatientForm.value.password;
-      user.gender = this.createPatientForm.value.gender;
-      user.age = this.createPatientForm.value.age;
-      user.roleId = 3; // Assuming '2' is the role ID for patients; adjust accordingly
-      user.role = new Role(); // Initialize role if necessary
-
-      this.apiService.addUser(user).subscribe(
-        (userResponse: any) => { // Use the User class
-          const patientData = {
-            userId: userResponse.id, // Now TypeScript recognizes 'id'
-            weight: this.createPatientForm.value.weight,
-            height: this.createPatientForm.value.height,
-            medicalcondition: this.createPatientForm.value.medicalcondition,
-            medication: this.createPatientForm.value.medications,
-            createdAt: new Date(),
-            isDeleted: false
-          };
-
-          this.apiService.addPatient(patientData).subscribe(
-            () => {
-              console.log('Patient created successfully');
-              // Optionally navigate or reset the form
-            },
-            (error) => {
-              console.error('Error creating patient:', error);
-            }
-          );
-        },
-        (error) => {
-          console.error('Error creating user:', error);
-        }
-      );
-    } else {
-      console.error('Form is invalid');
+      this.dialogRef.close(this.createPatientForm.value);
     }
   }
 }

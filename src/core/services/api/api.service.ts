@@ -30,12 +30,20 @@ export class ApiService {
   }
 
 
-  addUser(userData: User) {
-    return this.http.post(`${this.endpoint}/User/Create`,userData)
+  addUser(entity: object) {
+    return this.http
+    .request<BaseResponse>('post', environment.api_url + '/User/Create/', {
+      body: entity
+    })
+    .pipe(share());
   }
 
-  addPatient(patientData: any) {
-    return this.http.post(`${this.endpoint}/Patient/Create`,patientData)
+  addPatient(entity: object) {
+    return this.http
+    .request<BaseResponse>('post', environment.api_url + '/Patient/Create',{
+      body: entity
+    })
+    .pipe(share());
   }
 
 

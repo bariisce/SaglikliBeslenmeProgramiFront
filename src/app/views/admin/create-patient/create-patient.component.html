@@ -1,50 +1,68 @@
-<form [formGroup]="createPatientForm" (ngSubmit)="submit()" class="form-container">
-  <h2>Create Patient</h2>
-  <div class="form-field">
-    <label for="name">First Name</label>
-    <input id="name" formControlName="name" />
-  </div>
-  <div class="form-field">
-    <label for="surname">Last Name</label>
-    <input id="surname" formControlName="surname" />
-  </div>
-  <div class="form-field">
-    <label for="email">Email</label>
-    <input id="email" formControlName="email" type="email" />
-  </div>
-  <div class="form-field">
-    <label for="phoneNumber">Phone Number</label>
-    <input id="phoneNumber" formControlName="phonenumber" />
-  </div>
-  <div class="form-field">
-    <label for="username">Username</label>
-    <input id="username" formControlName="username" />
-  </div>
-  <div class="form-field">
-    <label for="password">Password</label>
-    <input id="password" formControlName="password" type="password" />
-  </div>
-  <div class="form-field">
-    <label for="gender">Gender</label>
-    <input id="gender" formControlName="gender" />
-  </div>
-  <div class="form-field">
-    <label for="height">Height</label>
-    <input id="height" formControlName="height" type="number" required />
-  </div>
-  <div class="form-field">
-    <label for="weight">Weight</label>
-    <input id="weight" formControlName="weight" type="number" required />
-  </div>
-  <div class="form-field">
-    <label for="medicalcondition">Medical Conditions</label>
-    <input id="medicalcondition" formControlName="medicalcondition" required />
-  </div>
-  <div class="form-field">
-    <label for="medication">Medications</label>
-    <input id="medication" formControlName="medication" required />
-  </div>
-  <div class="form-actions">
-    <button type="submit">Create Patient</button>
-  </div>
-</form>
+<h2 mat-dialog-title>Hasta Ekle</h2>
+<mat-dialog-content>
+  <form [formGroup]="createPatientForm">
+    <!-- İsim -->
+    <mat-form-field appearance="fill">
+      <mat-label>İsim</mat-label>
+      <input matInput formControlName="name" />
+    </mat-form-field>
+
+    <!-- Soyisim -->
+    <mat-form-field appearance="fill">
+      <mat-label>Soyisim</mat-label>
+      <input matInput formControlName="surname" />
+    </mat-form-field>
+
+    <!-- Email -->
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" />
+    </mat-form-field>
+
+    <!-- Telefon Numarası -->
+    <mat-form-field appearance="fill">
+      <mat-label>Telefon Numarası</mat-label>
+      <input matInput formControlName="phonenumber" />
+    </mat-form-field>
+
+    <!-- Kullanıcı Adı -->
+    <mat-form-field appearance="fill">
+      <mat-label>Kullanıcı Adı</mat-label>
+      <input matInput formControlName="username" />
+    </mat-form-field>
+
+    <!-- Şifre -->
+    <mat-form-field appearance="fill">
+      <mat-label>Şifre</mat-label>
+      <input matInput formControlName="password" type="password" />
+    </mat-form-field>
+
+    <!-- Cinsiyet -->
+    <mat-form-field appearance="fill">
+      <mat-label>Cinsiyet</mat-label>
+      <mat-select formControlName="gender">
+        <mat-option value="male">Erkek</mat-option>
+        <mat-option value="female">Kadın</mat-option>
+        <mat-option value="other">Diğer</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- Yaş -->
+    <mat-form-field appearance="fill">
+      <mat-label>Yaş</mat-label>
+      <input matInput formControlName="age" type="number" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>role id</mat-label>
+      <input matInput formControlName="roleId" type="number" />
+    </mat-form-field>
+
+    <!-- Kilo -->
+
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onNoClick()">İptal</button>
+  <button mat-button (click)="onSubmit()">Kaydet</button>
+</mat-dialog-actions>

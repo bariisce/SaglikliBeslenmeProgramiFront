@@ -9,7 +9,6 @@ export class User {
   email: string="";
   phonenumber: string="";
   username: string = "";
-  fullname: string="";
   password: string = "";
   gender: string = "";
   age: number = 0;
